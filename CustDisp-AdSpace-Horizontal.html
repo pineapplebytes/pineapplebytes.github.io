@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE
+ html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Horiziontal Advertisement Panel</title>
+      <link rel="stylesheet" type="text/css" href="CustDisp.css" />
+      <script language="JavaScript" type="text/javascript">
+
+      var interval = 3.5; // delay between rotating images (in seconds)
+      var random_display = 0; // 0 = no, 1 = yes
+      interval *= 1000;
+
+      var image_index = 0;
+      image_list = new Array();
+ 
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG10.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG12.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG13.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG14.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG15.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG16.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG17.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG18.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG19.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG2.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG20.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG21.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG3.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG4.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG5.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG6.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG7.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG8.jpg");
+ image_list[image_index++] = new imageItem ("https://sites.google.com/site/supplementkingadverts/2019_11_25_Nov25-Dec1%20BulkFridaySale_IG9.jpg");
+ var number_of_image = image_list.length;
+      function imageItem(image_location) {
+        this.image_item = new Image();
+        this.image_item.src = image_location;
+      }
+      function get_ImageItemLocation(imageObj) {
+        return(imageObj.image_item.src)
+      }
+
+      function generate(x, y) {
+        var range = y - x + 1;
+        return Math.floor(Math.random() * range) + x;
+      }
+      function getNextImage() {
+        if (random_display) {
+          image_index = generate(0, number_of_image-1);
+        }
+        else {
+          image_index = (image_index+1) % number_of_image;
+        }
+        var new_image = get_ImageItemLocation(image_list[image_index]);
+        return(new_image);
+      }
+      function rotateImage(place) {
+        var new_image = getNextImage();
+        document[place].src = new_image;
+        var recur_call = "rotateImage('" + place + "')";
+        setTimeout(recur_call, interval);
+      }
+      </script>
+   </head>
+
+   <body onload="rotateImage('rImage')">
+     <center>
+        <img name="rImage" src=("SampleHorizontalAd1.jpg" alt="Image Not Found" width="100%" height="100%" />
+     </center>
+   </body>
+</html>
