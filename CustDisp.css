@@ -1,0 +1,498 @@
+/* standard body for layouts (common settings) */
+body
+{
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  background-color: ButtonFace;
+  color: ButtonText;
+}
+
+/* ticket total data overrides from the common settings */
+body.totals
+{
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 12pt;
+}
+
+/* ticket total data overrides for Radiant 1550 */
+body.smalltotals
+{
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 8pt;
+}
+
+/* Layout title bar */
+/* Used for Date and Time */
+div.title
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 12pt;
+}
+
+/* Heading 1 */
+/* Used for Header */
+div.heading1
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 24pt;
+}
+
+/* Heading 2 */
+/* Used for Footer */
+div.heading2
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 16pt;
+}
+
+/* Heading 3 */
+/* Used for Item and Customer Information Headings */
+div.heading3
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 14pt;
+  text-align: center;
+}
+
+/* Caption (Display Label) */
+/* Used for */
+div.caption
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 10pt;
+}
+
+tr.Heading1
+/* Used for Item and Customer Information Labels */
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 24pt;
+}
+
+tr.Heading2
+/* Used for */
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 16pt;
+}
+
+tr.Heading3
+/* Used for */
+{
+  font-weight: bold;
+  background-color: ButtonFace;
+  text-align: center;
+  color: ButtonText;
+  padding: 2px;
+  font-size: 14pt;
+}
+
+
+/* standard table components for all layouts */
+table
+{
+  margin-left: 0px;
+  background-color: ButtonFace;
+  margin-bottom: 1em;
+  font-size: 12pt;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr.title
+/* Used for headings in Totals-Orders&Layaways */
+{
+  font-weight: bold;
+  text-align: right;
+  margin-left: 0px;
+  font-size: 12pt;
+}
+
+tr.bigtitle
+/* Used for Amount Due in Totals-Brief */
+{
+  font-weight: bold;
+  background-color: ActiveCaption;
+  color: CaptionText;
+  padding: 2px;
+  font-size: 16pt;
+}
+
+tr.smalltitle
+/* Used for Amount Due in Totals-Small for Radiant 1550*/
+{
+  font-weight: bold;
+  background-color: ActiveCaption;
+  color: CaptionText;
+  padding: 2px;
+  font-size: 8pt;
+}
+
+td.bigcaption
+/* Used for Totals Panel Labels */
+{
+  font-weight: bold;
+  text-align: right;
+  margin-left: 0px;
+  margin-bottom: 1em;
+}
+
+td.subcaption
+{
+  text-align: right;
+  margin-left: 0px;
+  margin-bottom: 1em;
+}
+
+td.smallcaption
+/* Used for Totals Panel Labels for Radiant 1550*/
+{
+  font-weight: bold;
+  text-align: right;
+  margin-left: 0px;
+  margin-bottom: 1em;
+  color: CaptionText;
+  font-size:8pt;
+}
+
+td.smallsubcaption 
+{
+  text-align: right;
+  margin-left: 0px;
+  margin-bottom: 1em;
+  color: CaptionText;
+  font-size:8pt;
+}
+
+.smallcaptionwhite
+/* Used for Totals Panel Labels for Radiant 1550*/
+{
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 1em;
+  color: white;
+  font-size:8pt;
+  border:0px;
+  margin:1px;
+}
+
+tr.title2
+/* Used for headings in Totals-Orders&Layaways */
+{
+  font-weight: bold;
+  color: ActiveCaption;
+  text-align: right;
+  margin-left: 0px;
+  font-size: 12pt;
+}
+
+td.infocaption
+/* Used for Item and Customer Information Display Labels */
+{
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+td.infovalue
+/* Used for Item and Customer Information */
+{
+  font-size: 10pt;
+}
+
+td.decimalvalue
+/* Used for Totals Panel Amounts */
+{
+  font-weight: bold;
+  text-align: right;
+  margin-left: 0px;
+  margin-bottom: 1em;
+}
+
+td.smalldecimalvalue
+/* Used for Totals Panel Amounts for Radiant 1550*/
+{
+  font-weight: bold;
+  text-align: right;
+  margin-left: 0px;
+  margin-bottom: 1em;
+  font-size: 8pt;
+}
+
+/* anchors used for aligning with clickable links */
+tr a
+{
+  padding-left: 5px;
+  padding-right: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: ButtonFace;
+  text-decoration: none;
+  color: ButtonText;
+}
+
+/* standard clickable links to mimic DevExpress coloring */
+tr.link a
+{
+  padding-left: 5px;
+  padding-right: 5px;
+  border-style: solid;
+  border-width: 1px;
+  text-decoration: none;
+  color: ButtonText;
+}
+
+tr.link a:hover
+{
+  border-color: Highlight;
+  background-color: InfoBackground;
+}
+
+/* Specific link overrides for Tax values (which turn red when overridden) */
+tr.documenttaxvalue a
+{
+  color: Black;
+}
+
+tr.tickettaxvalue a
+{
+  color: Red;
+}
+
+tr.ordertaxvalue a
+{
+  color: Red;
+}
+
+tr.layawaytaxvalue a
+{
+  color: Red;
+}
+
+tr.selunseltaxvalue a
+{
+  color: Red;
+}
+
+/* link override for the no tax indicator (aka Tax exemption) */
+tr.documentnotax a
+{
+  display: none;
+}
+
+tr.ticketnotax a
+{
+  display: none;
+}
+
+tr.ordernotax a
+{
+  display: none;
+}
+
+tr.layawaynotax a
+{
+  display: none;
+}
+
+tr.selunselnotax a
+{
+  display: none;
+}
+
+tr.taxauthgrid
+{
+  display: inline;
+}
+
+/* Summary line link coloring overrides */
+tr.bigtitle a
+{
+  padding-left: 5px;
+  padding-right: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: ActiveCaption;
+  text-decoration: none;
+  color: CaptionText;
+}
+
+tr.bigtitle a:hover
+{
+  border-color: Highlight;
+  background-color: InfoBackground;
+  color: ButtonText;
+}
+
+/* the following styles are for modification by Ticket Entry */
+/* the use flags */
+
+.usegiftcertificates
+    /* displayed when gift certificates are used */
+{
+  display: none;
+}
+
+.usemisccharges
+    /* displayed when misc charges are used */
+{
+  display: none;
+}
+
+.useminamountdue
+    /* used when entering a mixed document and a minimum amount is required
+       for non-sale portions of the document */
+{
+  display: none;
+}
+
+/* the state flags */
+.tosidle
+    /* displayed only when ticket entry is ready to begin entering a new
+       document */
+{
+  display: none;
+}
+
+.tosinsert
+    /* displayed only when ticket entry is entering a new document */
+{
+  display: none;
+}
+
+.tosbrowse
+    /* displayed only when ticket entry is browsing for a document */
+{
+  display: none;
+}
+
+.tosedit
+    /* displayed only when ticket entry is editing a document */
+{
+  display: none;
+}
+
+.tosrelease
+    /* displayed only when ticket entry is releasing a document */
+{
+  display: none;
+}
+
+/* order deposit flags */
+.orderdepositreceived
+    /* displayed when ORD_DEP_AMT_RECEIVED is non-zero */
+{
+  display: none;
+}
+
+.orderdepositapplied
+    /* displayed when ORD_DEP_AMT_APPLIED is non-zero */
+{
+  display: none;
+}
+
+.orderdepositrefunded
+    /* displayed when ORD_DEP_AMT_REFUNDED is non-zero */
+{
+  display: none;
+}
+
+.orderdepositforfeit
+    /* displayed when ORD_DEP_AMT_FORFEIT is non-zero */
+{
+  display: none;
+}
+
+.orderoriginaldeposit
+    /* displayed when ORD_DEP_AMT_REFUNDED or ORD_DEP_AMT_FORFEIT is non-zero */
+{
+  display: none;
+}
+
+/* layaway deposit flags */
+.layawaydepositreceived
+    /* displayed when LWY_DEP_AMT_RECEIVED is non-zero */
+{
+  display: none;
+}
+
+.layawaydepositapplied
+    /* displayed when LWY_DEP_AMT_APPLIED is non-zero */
+{
+  display: none;
+}
+
+.layawaydepositrefunded
+    /* displayed when LWY_DEP_AMT_REFUNDED is non-zero */
+{
+  display: none;
+}
+
+.layawaydepositforfeit
+    /* displayed when LWY_DEP_AMT_FORFEIT is non-zero */
+{
+  display: none;
+}
+
+.layawayoriginaldeposit
+    /* displayed when LWY_DEP_AMT_REFUNDED or LWY_DEP_AMT_FORFEIT is non-zero */
+{
+  display: none;
+}
+
+.salecolumn
+    /* displayed when there is a sale portion to a document */
+{
+  display: none;
+}
+
+.ordercolumn
+    /* displayed when there is an order portion to a document */
+{
+  display: none;
+}
+
+.layawaycolumn
+    /* displayed when there is a layaway portion to a document */
+{
+  display: none;
+}
+
+.documentcolumn
+    /* displayed when there is more than one portion to a document */
+{
+  display: none;
+}
+
+.columntotal
+{
+  font-weight: normal;
+}
