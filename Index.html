@@ -1,125 +1,92 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Matthews Code -->
-<!DOCTYPE
- html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+     var interval = 3.5; // delay between rotating images \(in seconds\)
+      var random\_display = 0; // 0 = no, 1 = yes
+      interval \*= 1000;
+      
+      var image\_index = 0;
+      var image\_list = new Array\(\);
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-   <head>
-      <title>Horiziontal Advertisement Panel</title>  
-        <style>
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-      border: 0;
-      overflow: hidden; /*  Disable scrollbars */
-      display: block;  /* No floating content on sides */
-    }
-    </style>
-      <link rel="stylesheet" type="text/css" href="CustDisp.css" />
-      <script language="JavaScript" type="text/javascript">
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram2.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram3.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram4.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram5.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram6.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram7.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram8.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram9.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram10.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram11.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram12.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram13.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram14.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram15.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram16.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram17.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram18.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram19.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram20.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram21.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram22.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram23.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram24.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram25.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram26.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram27.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram28.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram29.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram30.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram31.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram32.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram33.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram34.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram35.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram36.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram37.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram38.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram39.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram40.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram41.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram42.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram43.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram44.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram45.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram46.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram47.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram48.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram49 \(1\).jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram50.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram51.jpg"\);
+      image\_list\[image\_index++\] = new imageItem\("SPK1447 - BringthHeat - Instagram52.jpg"\);
 
-      var interval = 3.5; // delay between rotating images (in seconds)
-      var random_display = 0; // 0 = no, 1 = yes
-      interval *= 1000;
-	  
-	  //dir /O /B
-	  //="image_list[image_index++] = new imageItem("""&A1&""");"
+      var number\_of\_image = image\_list.length;
 
-      var image_index = 0;
-      image_list = new Array();
-
-
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram2.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram3.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram4.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram5.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram6.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram7.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram8.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram9.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram10.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram11.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram12.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram13.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram14.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram15.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram16.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram17.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram18.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram19.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram20.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram21.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram22.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram23.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram24.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram25.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram26.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram27.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram28.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram29.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram30.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram31.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram32.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram33.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram34.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram35.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram36.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram37.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram38.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram39.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram40.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram41.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram42.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram43.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram44.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram45.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram46.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram47.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram48.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram49 (1).jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram50.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram51.jpg);
-image_list[image_index++] = new imageItem("SPK1447 - BringthHeat - Instagram52.jpg);
-
-
- var number_of_image = image_list.length;
-      function imageItem(image_location) {
-        this.image_item = new Image();
-        this.image_item.src = image_location;
-      }
-      function get_ImageItemLocation(imageObj) {
-        return(imageObj.image_item.src)
+      function imageItem\(image\_location\) {
+        this.image\_item = new Image\(\);
+        this.image\_item.src = image\_location;
       }
 
-      function generate(x, y) {
+      function get\_ImageItemLocation\(imageObj\) {
+        return\(imageObj.image\_item.src\);
+      }
+
+      function generate\(x, y\) {
         var range = y - x + 1;
-        return Math.floor(Math.random() * range) + x;
+        return Math.floor\(Math.random\(\) \* range\) + x;
       }
-      function getNextImage() {
-        if (random_display) {
-          image_index = generate(0, number_of_image-1);
-        }
-        else {
-          image_index = (image_index+1) % number_of_image;
-        }
-        var new_image = get_ImageItemLocation(image_list[image_index]);
-        return(new_image);
-      }
-      function rotateImage(place) {
-        var new_image = getNextImage();
-        document[place].src = new_image;
-        var recur_call = "rotateImage('" + place + "')";
-        setTimeout(recur_call, interval);
-      }
-      </script>
-   </head>
 
-   <body onload="rotateImage('rImage')">
-     <center>
-        <img name="rImage" src=("SampleHorizontalAd1.jpg");" alt="Image Not Found" width="100%" height="100%" />
-     </center>
-   </body>
-</html>
+      function getNextImage\(\) {
+        if \(random\_display\) {
+          image\_index = generate\(0, number\_of\_image-1\);
+        } else {
+          image\_index = \(image\_index + 1\) % number\_of\_image;
+        }
+        var new\_image = get\_ImageItemLocation\(image\_list\[image\_index\]\);
+        return\(new\_image\);
+      }
+
+      function rotateImage\(place\) {
+        var new\_image = getNextImage\(\);
+        document\[place\].src = new\_image;
+        var recur\_call = "rotateImage\('" + place + "'\)";
+        setTimeout\(recur\_call, interval\);
+      }
