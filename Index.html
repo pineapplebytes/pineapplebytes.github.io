@@ -1,163 +1,168 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Matthews Code -->
-<!DOCTYPE
- html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-   <head>
-      <title>Horiziontal Advertisement Panel</title>  
-        <style>
+<head>
+  <title>Horizontal Advertisement Panel</title>
+  <link rel="stylesheet" type="text/css" href="CustDisp.css" />
+  <style type="text/css">
     html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-      border: 0;
-      overflow: hidden; /*  Disable scrollbars */
-      display: block;  /* No floating content on sides */
+      width:100%; height:100%; margin:0; border:0; overflow:hidden; display:block;
+      background:#000;
     }
-    </style>
-      <link rel="stylesheet" type="text/css" href="CustDisp.css" />
-      <script language="JavaScript" type="text/javascript">
+    img { border:0; }
+  </style>
 
-      var interval = 3.5; // delay between rotating images (in seconds)
-      var random_display = 0; // 0 = no, 1 = yes
-      interval *= 1000;
-	  
-	  //dir /O /B
-	  //="image_list[image_index++] = new imageItem("""&A1&""");"
+  <script language="JavaScript" type="text/javascript">
+//<![CDATA[
+  var interval = 3.5;   // seconds
+  var random_display = 0; // 0 = sequential, 1 = random
+  interval = interval * 1000;
 
-      var image_index = 0;
-      image_list = new Array();
+  // Keep ONLY paths (strings) – no Image() objects.
+  var image_index = -1;   // start before the first
+  var image_list  = new Array(
+    "Squares_Back On Track_01.jpg",
+    "Squares_Back On Track_02.jpg",
+    "Squares_Back On Track_03.jpg",
+    "Squares_Back On Track_04.jpg",
+    "Squares_Back On Track_05.jpg",
+    "Squares_Back On Track_06.jpg",
+    "Squares_Back On Track_07.jpg",
+    "Squares_Back On Track_08.jpg",
+    "Squares_Back On Track_09.jpg",
+    "Squares_Back On Track_10.jpg",
+    "Squares_Back On Track_11.jpg",
+    "Squares_Back On Track_12.jpg",
+    "Squares_Back On Track_13.jpg",
+    "Squares_Back On Track_14.jpg",
+    "Squares_Back On Track_15.jpg",
+    "Squares_Back On Track_16.jpg",
+    "Squares_Back On Track_17.jpg",
+    "Squares_Back On Track_18.jpg",
+    "Squares_Back On Track_19.jpg",
+    "Squares_Back On Track_20.jpg",
+    "Squares_Back On Track_21.jpg",
+    "Squares_Back On Track_22.jpg",
+    "Squares_Back On Track_23.jpg",
+    "Squares_Back On Track_24.jpg",
+    "Squares_Back On Track_25.jpg",
+    "Squares_Back On Track_26.jpg",
+    "Squares_Back On Track_27.jpg",
+    "Squares_Back On Track_28.jpg",
+    "Squares_Back On Track_29.jpg",
+    "Squares_Back On Track_30.jpg",
+    "Squares_Back On Track_31.jpg",
+    "Squares_Back On Track_32.jpg",
+    "Squares_Back On Track_33.jpg",
+    "Squares_Back On Track_34.jpg",
+    "Squares_Back On Track_35.jpg",
+    "Squares_Back On Track_36.jpg",
+    "Squares_Back On Track_37.jpg",
+    "Squares_Back On Track_38.jpg",
+    "Squares_Back On Track_39.jpg",
+    "Squares_Back On Track_40.jpg",
+    "Squares_Back On Track_41.jpg",
+    "Squares_Back On Track_42.jpg",
+    "Squares_Back On Track_43.jpg",
+    "Squares_Back On Track_44.jpg",
+    "Squares_Back On Track_45.jpg",
+    "Squares_Back On Track_46.jpg",
+    "Squares_Back On Track_47.jpg",
+    "Squares_Back On Track_48.jpg",
+    "Squares_Back On Track_49.jpg",
+    "Squares_Back On Track_50.jpg",
+    "Squares_Back On Track_51.jpg",
+    "Squares_Back On Track_52.jpg",
+    "Squares_Back On Track_53.jpg",
+    "Squares_Back On Track_54.jpg",
+    "Squares_Back On Track_55.jpg",
+    "Squares_Back On Track_56.jpg",
+    "Squares_Back On Track_57.jpg",
+    "Squares_Back On Track_58.jpg",
+    "Squares_Back On Track_59.jpg",
+    "Squares_Back On Track_60.jpg",
+    "Squares_Back On Track_61.jpg",
+    "Squares_Back On Track_62.jpg",
+    "Squares_Back On Track_63.jpg",
+    "Squares_Back On Track_64.jpg",
+    "Squares_Back On Track_65.jpg",
+    "Squares_Back On Track_66.jpg",
+    "Squares_Back On Track_67.jpg",
+    "Squares_Back On Track_68.jpg",
+    "Squares_Back On Track_69.jpg",
+    "Squares_Back On Track_70.jpg",
+    "Squares_Back On Track_71.jpg",
+    "Squares_Back On Track_72.jpg",
+    "Squares_Back On Track_73.jpg",
+    "Squares_Back On Track_74.jpg",
+    "Squares_Back On Track_75.jpg",
+    "Squares_Back On Track_76.jpg",
+    "Squares_Back On Track_77.jpg",
+    "Squares_Back On Track_78.jpg",
+    "Squares_Back On Track_79.jpg",
+    "Squares_Back On Track_80.jpg",
+    "Squares_Back On Track_81.jpg",
+    "Squares_Back On Track_82.jpg",
+    "Squares_Back On Track_83.jpg",
+    "Squares_Back On Track_84.jpg",
+    "Squares_Back On Track_85.jpg",
+    "Squares_Back On Track_86.jpg",
+    "Squares_Back On Track_87.jpg",
+    "Squares_Back On Track_88.jpg",
+    "Squares_Back On Track_89.jpg",
+    "Squares_Back On Track_90.jpg"
+  );
 
+  function getEl(nameOrId) {
+    if (document.getElementById) {
+      var el = document.getElementById(nameOrId);
+      if (el) return el;
+    }
+    if (document.images && document.images[nameOrId]) return document.images[nameOrId];
+    if (document.all) return document.all[nameOrId];
+    return null;
+  }
 
-image_list[image_index++] = new imageItem("Squares_Back On Track_03.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_01.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_02.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_04.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_05.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_06.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_07.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_08.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_09.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_10.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_11.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_12.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_13.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_14.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_15.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_16.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_17.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_18.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_19.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_20.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_21.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_22.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_23.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_24.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_25.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_26.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_27.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_28.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_29.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_30.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_31.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_32.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_33.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_34.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_35.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_36.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_37.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_38.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_39.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_40.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_41.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_42.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_43.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_44.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_45.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_46.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_47.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_48.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_49.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_50.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_51.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_52.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_53.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_54.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_55.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_56.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_57.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_58.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_59.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_60.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_61.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_62.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_63.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_64.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_65.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_66.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_67.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_68.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_69.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_70.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_71.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_72.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_73.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_74.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_75.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_76.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_77.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_78.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_79.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_80.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_81.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_82.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_83.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_84.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_85.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_86.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_87.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_88.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_89.jpg");
-image_list[image_index++] = new imageItem("Squares_Back On Track_90.jpg");
+  function nextIndex(curr, n) {
+    if (!n) return 0;
+    if (random_display) {
+      if (n <= 1) return 0;
+      var j;
+      do { j = Math.floor(Math.random() * n); } while (j === curr);
+      return j;
+    } else {
+      return (curr + 1) % n;
+    }
+  }
 
+  function rotateImage(place) {
+    var img = getEl(place);
+    if (!img || image_list.length === 0) return;
 
- var number_of_image = image_list.length;
-      function imageItem(image_location) {
-        this.image_item = new Image();
-        this.image_item.src = image_location;
-      }
-      function get_ImageItemLocation(imageObj) {
-        return(imageObj.image_item.src)
-      }
+    image_index = nextIndex(image_index, image_list.length);
 
-      function generate(x, y) {
-        var range = y - x + 1;
-        return Math.floor(Math.random() * range) + x;
-      }
-      function getNextImage() {
-        if (random_display) {
-          image_index = generate(0, number_of_image-1);
-        }
-        else {
-          image_index = (image_index+1) % number_of_image;
-        }
-        var new_image = get_ImageItemLocation(image_list[image_index]);
-        return(new_image);
-      }
-      function rotateImage(place) {
-        var new_image = getNextImage();
-        document[place].src = new_image;
-        var recur_call = "rotateImage('" + place + "')";
-        setTimeout(recur_call, interval);
-      }
-      </script>
-   </head>
+    // Load ONLY the active image now:
+    img.setAttribute('src', image_list[image_index]);
 
-   <body onload="rotateImage('rImage')">
-     <center>
-        <img name="rImage" src=("SampleHorizontalAd1.jpg");" alt="Image Not Found" width="100%" height="100%" />
-     </center>
-   </body>
+    // Legacy-safe timeout (string callback)
+    setTimeout('rotateImage("' + place + '")', interval);
+  }
+
+  // Old IE-safe onload hook
+  function start() { rotateImage('rImage'); }
+  if (window.attachEvent) { window.attachEvent('onload', start); }
+  else { window.onload = start; }
+//]]>
+  </script>
+</head>
+
+<body>
+  <center>
+    <!-- fixed invalid XHTML src syntax from earlier -->
+    <img name="rImage" id="rImage" src="SampleHorizontalAd1.jpg"
+         alt="Image Not Found" width="100%" height="100%" />
+  </center>
+</body>
 </html>
